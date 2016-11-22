@@ -40,7 +40,12 @@ window.onload=function()
             }
         }
         
-        
+        count=0;
+        document.getElementById('status').innerHTML="Move mouse over \'S\' to begin";
+        for(var k=0; k<boundrys.length-1; k++)
+        {
+            boundrys[k].className="boundary";
+        }
     }
   
 }
