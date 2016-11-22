@@ -47,7 +47,25 @@ window.onload=function()
             boundrys[k].className="boundary";
         }
         
-        
+        document.onmouseover=function(num)
+        {
+            var left= maze.offsetLeft;
+            var right= maze.offsetRight;
+            var top= maze.offsetTop;
+            var height= maze.offsetHeight;
+            var width= maze.offsetWidth;
+            var x = num.clientX ;
+            var y = num.clientY;
+            
+            if ((x<left)||(x>right))
+            {
+                for(var k=0; k<boundrys.length-1; k++)
+                {
+                    boundrys[k].className += "youlose";
+                    count+=1;
+                    document.getElementById("status").innerHTML="You Lose";
+                }
+            }
+        }
     }
-  
 }
