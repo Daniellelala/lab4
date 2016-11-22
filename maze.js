@@ -18,8 +18,29 @@ window.onload=function()
             {
                 boundrys[k].className += " youlose";
                 count +=1;
-                document.getElementById("status").innerHTML=" You Lose";
-      }
+                document.getElementById("status").innerHTML=" You Lose!";
+            }
+        }
     }
-  }
+  
+    document.getElementById('end').onmouseover=function()
+    {
+        document.getElementById("status").innerHTML="Start at the 'S'";
+    }
+  
+    document.getElementById("start").onclick=function()
+    {
+        document.getElementById('end').onmouseover=function()
+        {
+            if(count > 0){
+                document.getElementById('status').innerHTML="You Lose!";
+            }
+            else{
+                document.getElementById('status').innerHTML="You Win!";
+            }
+        }
+        
+        
+    }
+  
 }
