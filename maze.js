@@ -46,6 +46,8 @@ window.onload=function()
         {
             boundrys[k].className="boundary";
         }
+        
+        
     }
   
 }
